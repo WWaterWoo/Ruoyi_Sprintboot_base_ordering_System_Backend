@@ -61,6 +61,14 @@
             <artifactId>ruoyi-generator</artifactId>
         </dependency>
 
+        <!--    活动信息管理    -->
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>ruoyi-restaurant</artifactId>
+            <version>${ruoyi.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
