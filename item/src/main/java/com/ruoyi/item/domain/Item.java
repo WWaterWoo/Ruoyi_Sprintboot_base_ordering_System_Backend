@@ -1,5 +1,6 @@
 package com.ruoyi.item.domain;
 
+import java.math.BigDecimal;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ruoyi.common.annotation.Excel;
@@ -9,19 +10,14 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * item对象 item
  * 
  * @author group14
- * @date 2023-10-23
+ * @date 2023-10-24
  */
 public class Item extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
 
     /** item id */
-    @Excel(name = "item id")
     private Long itemId;
-
-    /** restaurant id */
-    @Excel(name = "restaurant id")
-    private Long restaurantId;
 
     /** item picture */
     @Excel(name = "item picture")
@@ -31,13 +27,17 @@ public class Item extends BaseEntity
     @Excel(name = "item name")
     private String itemName;
 
+    /** item price */
+    @Excel(name = "item price")
+    private BigDecimal itemPrice;
+
+    /** item description */
+    @Excel(name = "item description")
+    private String itemDescription;
+
     /** order number */
     @Excel(name = "order number")
     private Integer orderNum;
-
-    /** item status (0 is on sale 1 is sold out.) */
-    @Excel(name = "item status (0 is on sale 1 is sold out.)")
-    private String status;
 
     public void setItemId(Long itemId) 
     {
@@ -47,15 +47,6 @@ public class Item extends BaseEntity
     public Long getItemId() 
     {
         return itemId;
-    }
-    public void setRestaurantId(Long restaurantId) 
-    {
-        this.restaurantId = restaurantId;
-    }
-
-    public Long getRestaurantId() 
-    {
-        return restaurantId;
     }
     public void setItemPic(String itemPic) 
     {
@@ -75,6 +66,24 @@ public class Item extends BaseEntity
     {
         return itemName;
     }
+    public void setItemPrice(BigDecimal itemPrice) 
+    {
+        this.itemPrice = itemPrice;
+    }
+
+    public BigDecimal getItemPrice() 
+    {
+        return itemPrice;
+    }
+    public void setItemDescription(String itemDescription) 
+    {
+        this.itemDescription = itemDescription;
+    }
+
+    public String getItemDescription() 
+    {
+        return itemDescription;
+    }
     public void setOrderNum(Integer orderNum) 
     {
         this.orderNum = orderNum;
@@ -84,25 +93,16 @@ public class Item extends BaseEntity
     {
         return orderNum;
     }
-    public void setStatus(String status) 
-    {
-        this.status = status;
-    }
-
-    public String getStatus() 
-    {
-        return status;
-    }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
             .append("itemId", getItemId())
-            .append("restaurantId", getRestaurantId())
             .append("itemPic", getItemPic())
             .append("itemName", getItemName())
+            .append("itemPrice", getItemPrice())
+            .append("itemDescription", getItemDescription())
             .append("orderNum", getOrderNum())
-            .append("status", getStatus())
             .toString();
     }
 }

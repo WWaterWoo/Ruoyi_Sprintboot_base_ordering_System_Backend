@@ -180,8 +180,9 @@
         <module>ruoyi-quartz</module>
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
-        <module>restaurant</module>
         <module>item</module>
+        <module>orders</module>
+        <module>order_details</module>
     </modules>
     <packaging>pom</packaging>
 

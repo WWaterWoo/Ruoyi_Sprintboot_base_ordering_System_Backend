@@ -25,7 +25,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
  * itemController
  * 
  * @author group14
- * @date 2023-10-23
+ * @date 2023-10-24
  */
 @RestController
 @RequestMapping("/item/item")

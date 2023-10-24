@@ -9,7 +9,7 @@
         <version>3.8.6</version>
     </parent>
 
-    <artifactId>restaurant</artifactId>
+    <artifactId>orders</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,7 +17,5 @@
             <artifactId>ruoyi-common</artifactId>
         </dependency>
     </dependencies>
-
-
 
 </project>
